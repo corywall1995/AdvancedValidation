@@ -12,6 +12,8 @@ function validate(){
     document.getElementById("usernameGroup").classList.remove("has-error");
     //Adds the success class (turns items green)
     document.getElementById("usernameGroup").classList.add("has-success");
+    document.getElementById("usernameError").classList.add("shown-message");
+    document.getElementById("usernameError").classList.remove("hidden-message");
   } else if (userEntered.length == 0) {
     //Show message that there is an error with the username...
     document.getElementById("usernameError").innerHTML="Username field cannot be left blank";
@@ -50,6 +52,8 @@ function validate(){
     document.getElementById("passwordGroup").classList.remove("has-error");
     //Adds the success class (turns items green)
     document.getElementById("passwordGroup").classList.add("has-success");
+    document.getElementById("passwordError").classList.remove("hidden-message");
+    document.getElementById("passwordError").classList.add("shown-message");
   } else if (passEntered.length == 0) {
     //Show message that there is an error with the password...
     document.getElementById("passwordError").innerHTML="Password field cannot be left blank";
@@ -93,4 +97,5 @@ function validate(){
     //Turn the password items red
     document.getElementById("passwordGroup").classList.add("has-error");
   }
+
 }
